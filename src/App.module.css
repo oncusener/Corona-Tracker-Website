@@ -1,5 +1,6 @@
 body {
-  background: white url("") no-repeat fixed center;
+  background: white no-repeat fixed center;
+
 }
 
 .container {
@@ -9,7 +10,7 @@ body {
 }
 
 .image {
-  width: 370px;
+  width: 400px;
   margin-top: 50px;
 }
 
