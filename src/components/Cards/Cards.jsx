@@ -11,16 +11,15 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     return 'Loading...';
   }
 
-  let percentageDeath= (deaths.value)*100/(confirmed.value)
-  let prcDeath = percentageDeath.toFixed(2)
+  const percentageDeath= (deaths.value)*100/(confirmed.value)
+  const prcDeath = percentageDeath.toFixed(2)
 
-  let recoveredPeople =(recovered.value)*100/(confirmed.value)
-  let rcrvdppl=recoveredPeople.toFixed(2)
+  const recoveredPeople =(recovered.value)*100/(confirmed.value)
+  const rcrvdppl=recoveredPeople.toFixed(2)
 
   return (
     <div className={styles.container}>
 
-  
       <Grid container spacing={3} justify="center" >
         <Grid item xs={12} md={3} component={Card} className={cx(styles.card, styles.infected)}>
           <CardContent>
@@ -33,7 +32,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <hr/>
             <Typography variant="h5" component="h2">
             <Typography color="textSecondary" gutterBottom>
-            Last Updated 
+            Last Updated
             </Typography>   {new Date(lastUpdate).toDateString()}
             </Typography>
             <hr/>
@@ -53,7 +52,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <hr/>
             <Typography variant="h5" component="h2">
             <Typography color="textSecondary" gutterBottom>
-            Last Updated 
+            Last Updated
             </Typography>   {new Date(lastUpdate).toDateString()}
             </Typography>
             <hr/>
@@ -68,14 +67,14 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Deaths
             </Typography>
-     
+
             <Typography variant="h3" component="h2">
               <CountUp start={0} end={deaths.value} duration={2.75} separator="," />
             </Typography>
             <hr/>
             <Typography variant="h5" component="h2">
             <Typography color="textSecondary" gutterBottom>
-            Last Updated 
+            Last Updated
             </Typography>   {new Date(lastUpdate).toDateString()}
             </Typography>
             <hr/>
